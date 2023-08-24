@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <div class="button-container">
+            <button type="button" onClick="onLoginBtnClick()">Login</button>
+            <button type="button" onClick="onClearBtnClick()">Clear</button> 
+        </div>
+        <script>
+            function onLoginBtnClick(){
+                const errorMsg = "INCOMPLETE LOGIN DETAILS";
+                var username = document.getElementById("username").value.trim();
+                let isUsernameEmpty = true;
+                if(username.length === 0){
+                let isUsernameEmpty = true;
+                alert(errorMsg);
+                errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
+                } else {
+                isUsernameEmpty = false;
+                }
+                console.log("isUsernameEmpty=", isUsernameEmpty);
+            }
+        </script>
+    </body>
+</html>
+
